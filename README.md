@@ -1,0 +1,45 @@
+# Dynatrace.RUM 
+[![NuGet](http://img.shields.io/nuget/v/Dynatrace.RUM.AspNet.svg)](https://www.nuget.org/packages/Dynatrace.RUM.AspNet/)
+
+The Dynatrace.RUM middleware for ASP.NET Core automatically injects a javascript tag required for [Dynatrace Real User Monitoring](https://www.dynatrace.com/support/help/how-to-use-dynatrace/real-user-monitoring/) into your HTML output. 
+
+The module utilizes the [Dynatrace REST-API](https://www.dynatrace.com/support/help/extend-dynatrace/dynatrace-api/environment/rum-and-javascript-api/) to get latest javascript code. 
+
+## How-To-Use
+Like any other http-module, the module has to be registered in your projects `web.config` file, same as the modules configuration. [See example](#Example)
+
+### Prerequisites
+- Generate a [Dynatrace API Token](https://www.dynatrace.com/support/help/shortlink/api-authentication#generate-a-token)
+- Get your [Environment-ID](https://www.dynatrace.com/support/help/get-started/introduction/why-do-i-need-an-environment-id/)
+- Prepare your API-Endpoint, which is either `https://{your-domain}/e/{your-environment-id}` for Dynatrace Managed or `https://{your-environment-id}.live.dynatrace.com` for Dynatrace SaaS
+- Setup [agentless monitoring](https://www.dynatrace.com/support/help/shortlink/agentless-rum#set-up-agentless-monitoring)
+- Get your application-id either [via REST-API](https://www.dynatrace.com/support/help/shortlink/api-javascript#anchor_manual-app) or you can click applications currently set up for agentless monitoring. Then you will view the list of currently set up applications where you retrieve the application-id from the brower url if you browse to your application of interest. 
+
+
+### Example
+``` 
+<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+  <appSettings>
+    <add key="Dynatrace.ApiEndpoint" value=""/>
+    <add key="Dynatrace.ApiToken" value=""/>
+    <add key="Dynatrace.ApplicationId" value=""/>
+  </appSettings>
+  <system.webServer>
+    <modules runAllManagedModulesForAllRequests="true">
+      <remove name="DTRUM"/>
+        <add name="DTRUM" type="Dynatrace.RUM.AutomaticJSInjection" preCondition="integratedMode" />
+    </modules>
+  </system.webServer>
+  ...
+ 
+```
+
+## Where can I get it?
+This package is available on [https://www.nuget.org/packages/Dynatrace.RUM.AspNet](https://www.nuget.org/packages/Dynatrace.RUM.AspNet)
+
+## References
+The injection is referencing following project hosted on [Azure DevOps](https://dev.azure.com/modularmind/ModularMind.DotNet)
+
+## License
+This package is licensed under the [Apache 2.0 license](LICENSE.txt).
