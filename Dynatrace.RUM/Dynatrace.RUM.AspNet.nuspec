@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>Dynatrace.RUM.AspNet</id>
+    <version>1.0.0</version>
+    <title>Dynatrace RUM for ASP.NET</title>
+    <authors>Patrick Thurner</authors>
+    <owners>Patrick Thurner</owners>
+    <licenseUrl>https://raw.githubusercontent.com/dtPaTh/Dynatrace-RUM-AspNet/master/LICENSE</licenseUrl>
+    <projectUrl>https://github.com/dtPaTh/Dynatrace-RUM-AspNet</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Asp.Net module to inject Dynatrace RUM javascript tag</description>
+    <releaseNotes>Initial release</releaseNotes>
+    <copyright>Copyright 2019</copyright>
+    <tags>Dynatrace</tags>
+    <dependencies>
+      <dependency id="MM.Core" version="1.0.0" />
+    </dependencies>
+  </metadata>
+</package>
