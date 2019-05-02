@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MM.Web", "MM.Web\MM.Web.csp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test.WebApp", "Test.WebApp\Test.WebApp.csproj", "{FD8063A5-C647-4B9F-8F12-068EAF017669}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dynatrace.RUM", "Dynatrace.RUM\Dynatrace.RUM.csproj", "{10321146-5F70-4BDB-B79F-61234E236760}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dynatrace.RUM.AspNet", "Dynatrace.RUM\Dynatrace.RUM.AspNet.csproj", "{10321146-5F70-4BDB-B79F-61234E236760}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
