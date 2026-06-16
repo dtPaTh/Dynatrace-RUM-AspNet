@@ -1,4 +1,5 @@
-# Dynatrace.RUM 
+# [ARCHIVED] Dynatrace.RUM 
+[![No Maintenance Intended](http://unmaintained.tech/badge.svg)](http://unmaintained.tech/)
 [![NuGet](http://img.shields.io/nuget/v/Dynatrace.RUM.AspNet.svg)](https://www.nuget.org/packages/Dynatrace.RUM.AspNet/)
 
 The Dynatrace.RUM middleware for ASP.NET Core automatically injects a javascript tag required for [Dynatrace Real User Monitoring](https://www.dynatrace.com/support/help/how-to-use-dynatrace/real-user-monitoring/) into your HTML output. 
